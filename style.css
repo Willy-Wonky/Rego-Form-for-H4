@@ -1,0 +1,319 @@
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    padding: 50px;
+    font-family: 'Quando', serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(88, 88, 88);
+    background-image:
+        linear-gradient(107deg, rgba(61, 61, 61, 0.04) 0%, rgba(61, 61, 61, 0.04) 20%, rgba(228, 228, 228, 0.04) 20%, rgba(228, 228, 228, 0.04) 100%),
+        linear-gradient(54deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 74%, rgba(167, 167, 167, 0.04) 74%, rgba(167, 167, 167, 0.04) 100%),
+        linear-gradient(143deg, rgba(10, 10, 10, 0.04) 0%, rgba(10, 10, 10, 0.04) 43%, rgba(169, 169, 169, 0.04) 43%, rgba(169, 169, 169, 0.04) 100%),
+        linear-gradient(8deg, rgba(238, 238, 238, 0.04) 0%, rgba(238, 238, 238, 0.04) 96%, rgba(162, 162, 162, 0.04) 96%, rgba(162, 162, 162, 0.04) 100%), linear-gradient(90deg, #00b099, rgb(0, 255, 213));
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+    font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 50px 0;
+}
+
+#contact h3 {
+    color: #00b099;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid rgb(88, 88, 88);
+}
+
+#contact textarea {
+    max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #00b099;
+    text-transform: uppercase;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+    background: rgb(0, 255, 221);
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    color: rgb(88, 88, 88);
+}
+
+::-webkit-input-placeholder {
+    color: rgb(155, 155, 155);
+}
+
+:-moz-placeholder {
+    color: rgb(155, 155, 155);
+}
+
+::-moz-placeholder {
+    color: rgb(155, 155, 155);
+}
+
+:-ms-input-placeholder {
+    color: rgb(155, 155, 155);
+}
+
+
+
+.error {
+    color: #FF0000;
+}
+
+
+
+
+
+/* The options */
+.options {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.options input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.options:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.options input:checked~.checkmark {
+    background-color: #00b099;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.options input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.options .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* ----------Checkbox---------- */
+
+
+.check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.check .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 0;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.check:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ----------End Checkbox---------- */
+.sign p {
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+
+
+/* -----------Select box ---------------*/
+.styled select {
+    background: transparent;
+
+    height: 34px;
+}
+
+.styled {
+    font-size: 1.2em;
+    color: rgb(88, 88, 88);
+    min-width: 100%;
+    width: 100%;
+    height: 34px;
+    border: 1px solid #ccc;
+    background: #F9F9F9;
+    margin-bottom: 25px;
+}
+
+/* -----------End Select box ---------------*/
